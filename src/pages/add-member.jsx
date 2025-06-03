@@ -3,6 +3,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
+import "../styles/AddMemberStyles.css";
+import "../styles/AddNewMember.css";
 
 // Validation schema
 const validationSchema = z.object({
@@ -64,54 +66,49 @@ export const AddMemberPage = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="add-member-container">
       <Toaster />
-      <h2 className="text-2xl font-bold mb-4">Add New Member</h2>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col md:flex-row items-center gap-4 p-4 bg-white rounded shadow-md"
-      >
-        <div className="flex flex-col">
+      <h2 className="form-title">Add New Member</h2>
+
+      <form onSubmit={handleSubmit(onSubmit)} className="member-form">
+        <div className="input-group">
           <input
             type="text"
             placeholder="Full Name"
             {...register("full_name")}
-            className="px-4 py-2 border border-gray-300 rounded-md"
+            className="input-field"
           />
           {errors.full_name && (
-            <p className="text-red-500 text-sm">{errors.full_name.message}</p>
+            <p className="error-text">{errors.full_name.message}</p>
           )}
         </div>
 
-        <div className="flex flex-col">
+        <div className="input-group">
           <input
             type="number"
             placeholder="Weight"
             {...register("weight")}
-            className="px-4 py-2 border border-gray-300 rounded-md"
+            className="input-field"
           />
           {errors.weight && (
-            <p className="text-red-500 text-sm">{errors.weight.message}</p>
+            <p className="error-text">{errors.weight.message}</p>
           )}
         </div>
 
-        <div className="flex flex-col">
+        <div className="input-group">
           <input
             type="text"
             placeholder="Passport URL"
             {...register("passport")}
-            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="input-field"
           />
           {errors.passport && (
-            <p className="text-red-500 text-sm">{errors.passport.message}</p>
+            <p className="error-text">{errors.passport.message}</p>
           )}
         </div>
 
-        <div className="flex flex-col">
-          <select
-            {...register("subscription_id")}
-            className="p-3 rounded-md border border-gray-300"
-          >
+        <div className="input-group">
+          <select {...register("subscription_id")} className="select-field">
             <option value="">Select a subscription</option>
             {subscriptions.map((subscription) => (
               <option key={subscription.id} value={subscription.id}>
@@ -120,16 +117,11 @@ export const AddMemberPage = () => {
             ))}
           </select>
           {errors.subscription_id && (
-            <p className="text-red-500 text-sm">
-              {errors.subscription_id.message}
-            </p>
+            <p className="error-text">{errors.subscription_id.message}</p>
           )}
         </div>
 
-        <button
-          type="submit"
-          className="px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md"
-        >
+        <button type="submit" className="submit-button">
           Submit
         </button>
       </form>

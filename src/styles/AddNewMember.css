@@ -1,0 +1,95 @@
+.add-member-container {
+    max-width: 480px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(44, 46, 58, 0.85); 
+    backdrop-filter: blur(6px);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 209, 255, 0.15);
+    font-family: 'Poppins', sans-serif;
+    color: #B0BEC5;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    color: #00D1FF;
+    text-align: center;
+    text-shadow: 0 0 8px #00D1FF;
+  }
+  
+  .member-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .input-field,
+  .select-field {
+    background: #2C2E3A; 
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    color: #B0BEC5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+  }
+  
+  .input-field::placeholder,
+  .select-field option:first-child {
+    color: #90A4AE; 
+  }
+  
+  .input-field:focus,
+  .select-field:focus {
+    border-color: #00D1FF;
+    box-shadow: 0 0 8px #00D1FF;
+    color: #E0F7FA;
+  }
+  
+  .select-field {
+    cursor: pointer;
+  }
+  
+  .error-text {
+    color: #FF4D4F; 
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-top: 0.3rem;
+    text-shadow: 0 0 3px #FF4D4F;
+  }
+  
+  .submit-button {
+    background: linear-gradient(45deg, #00D1FF, #00FF85);
+    color: #121212;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.9rem 0;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 6px 20px rgba(0, 255, 133, 0.4);
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    user-select: none;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(45deg, #00FF85, #00D1FF);
+    box-shadow: 0 10px 30px rgba(0, 255, 133, 0.6);
+    transform: translateY(-3px);
+  }
+  
+  .submit-button:focus {
+    outline: 2px solid #00D1FF;
+    outline-offset: 2px;
+  }
+  
