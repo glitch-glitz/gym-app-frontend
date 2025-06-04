@@ -1,12 +1,20 @@
-# React + Vite
+                FlexNation [(https://www.loom.com/share/dd9e6b50381443978e424dbb44722895)]
+<!-- FlexNation is a simple gym membership and attendance tracking application designed for gym administrators to efficiently manage members and their subscriptions. -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    Features:
+<!-- Add new gym members and assign subscription plans.-->
 
-Currently, two official plugins are available:
+<!-- Log member check-ins and check-outs to monitor attendance.-->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- View active and expired subscription statuses. -->
 
-## Expanding the ESLint configuration
+<!-- Track key member stats including weight, BMI, and total hours spent at the gym. --> --> -->
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    Models and Relationships:
+*Members — gym users registered in the system.*
+
+*Subscriptions — membership plans assigned to members.*
+
+*CheckIns — records of members' check-in and check-out times.*
+
+<!-- There is a one-to-many relationship between Members and CheckIns, as each member can have multiple check-in records. Similarly, Members are linked to Subscriptions to manage active memberships. -->
