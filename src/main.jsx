@@ -5,15 +5,20 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage.jsx";
 import { AddMemberPage } from "./pages/add-member.jsx";
 import { MemberListPage } from "./pages/MemberListPage.jsx";
+import CheckIn from "./pages/CheckIn.jsx";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />, 
+    element: <LandingPage />,
   },
   {
     path: "/members",
-    element: <MemberListPage />, 
+    element: <MemberListPage />,
+  },
+  {
+    path: "/register",
+    element: <CheckIn />,
   },
   {
     path: "/add-member",

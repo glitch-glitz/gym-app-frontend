@@ -49,7 +49,7 @@ export const MemberListPage = () => {
               <th>Name</th>
               <th>Weight</th>
               <th>Subscription</th>
-              <th>Actions</th> {/* New column for Delete */}
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>

@@ -2,9 +2,7 @@
 @import "tailwindcss/preflight";
 @tailwind utilities;
 
-/* index.css */
 
-/* General resets and body styling */
 body {
     margin: 0;
     padding: 0;
@@ -13,7 +11,7 @@ body {
     color: #333;
   }
   
-  /* Common utility classes */
+
   .container {
     max-width: 1200px;
     margin: auto;

@@ -50,7 +50,7 @@ export const AddMemberPage = () => {
         body: JSON.stringify({
           full_name: values.full_name,
           weight: values.weight,
-          passport: values.passport, // just a string URL now
+          passport: values.passport,
           subscription_id: parseInt(values.subscription_id),
         }),
       });

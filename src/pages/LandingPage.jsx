@@ -10,13 +10,15 @@ export function LandingPage() {
         <p>Your one-stop app for managing gym members and subscriptions.</p>
       </header>
 
-      {/* Buttons moved outside the header */}
       <section className="button-section">
+        <Link to="/add-member" className="btn">
+          Add Member
+        </Link>
         <Link to="/members" className="btn">
           Go to Members
         </Link>
-        <Link to="/add-member" className="btn">
-          Add Member
+        <Link to="/register" className="btn">
+          CheckIn
         </Link>
       </section>
 
